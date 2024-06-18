@@ -2,6 +2,8 @@ import os
 
 from flask import Flask
 
+import webapp.blueprints.hoge
+
 
 def create_app(test_config=None):
     """Flaskアプリケーションを作成"""
@@ -19,6 +21,8 @@ def create_app(test_config=None):
 
     @app.route("/hello")
     def hello():
-        return "Hello World!!"
+        return "Hello World"
+
+    app.register_blueprint(webapp.blueprints.hoge.bp)
 
     return app
