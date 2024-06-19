@@ -2,7 +2,7 @@ import os
 
 from flask import Flask
 
-import webapp.blueprints.hoge
+from webapp.blueprints import home
 
 
 def create_app(test_config=None):
@@ -23,6 +23,6 @@ def create_app(test_config=None):
     def hello():
         return "Hello World"
 
-    app.register_blueprint(webapp.blueprints.hoge.bp)
+    app.register_blueprint(home.bp)
 
     return app
