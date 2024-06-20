@@ -2,7 +2,7 @@ import os
 
 from flask import Flask
 
-from webapp.blueprints import home
+from webapp.blueprints import home, link
 
 
 def create_app(test_config=None):
@@ -24,5 +24,6 @@ def create_app(test_config=None):
         return "Hello World"
 
     app.register_blueprint(home.bp)
+    app.register_blueprint(link.bp)
 
     return app
