@@ -3,7 +3,7 @@ from datetime import datetime
 
 from flask import Blueprint, render_template
 
-bp = Blueprint("home", __name__)
+bp = Blueprint("home", __name__, static_folder="./webapp/templates/home/img")
 
 
 @bp.route("/")
