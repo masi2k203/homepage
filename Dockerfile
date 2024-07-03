@@ -18,4 +18,4 @@ COPY --from=builder /usr/local/bin /usr/local/bin
 COPY ./webapp /usr/src/app/webapp
 WORKDIR /usr/src/app
 
-CMD ["flask", "run", "--host", "0.0.0.0", "--port", "3000"]
+CMD ["flask", "run", "--host", "0.0.0.0", "--port", "80"]

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block body %}
+<h2 class="fw-light d-flex justify-content-center my-4">ミニブログ</h2>
+<div class="row row-cols-1 row-cols-sm-2 px-2">
+    {% for item in posts %}
+    {% with item = item %}
+    {% include 'miniblog/post_card.html' %}
+    {% endwith %}
+    {% endfor %}
+</div>
+
+{% endblock %}

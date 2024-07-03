@@ -2,7 +2,7 @@ import os
 
 from flask import Flask
 
-from webapp.blueprints import home, link
+from webapp.blueprints import home, link, miniblog
 
 
 def create_app(test_config=None):
@@ -25,5 +25,6 @@ def create_app(test_config=None):
 
     app.register_blueprint(home.bp)
     app.register_blueprint(link.bp)
+    app.register_blueprint(miniblog.bp)
 
     return app
